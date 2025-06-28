@@ -1,13 +1,16 @@
 import { useState } from "react";
 import Header from "./Header";
 import User from "./User";
-import Login, {Profile, Setting} from "./UserComponent";
+import Login, {Profile, Setting, UserKey} from "./UserComponent";
 
 function App() {
+  const userName = "Muzamil Fatima";
   console.log(sum());
   const [counter, setCounter] = useState(0);
   return (
     <>
+    <button onClick={() => alert("hello")}>Click Me</button>
+    <h1>{userName}</h1>
       <Header />
       <Login />
       <h1>Counter Val: {counter}</h1>
@@ -16,6 +19,7 @@ function App() {
       <Setting />
       <Fruit />
       <Colors />
+      <h1>{UserKey}</h1>
       <button onClick={() => setCounter(counter + 1)}>
         Increase Counter Val
       </button>
